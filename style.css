@@ -8,6 +8,15 @@ body{
 .green{
     background-color: #B9FF66;
 }
+.white{
+    background-color: white;
+}
+.dark{
+    background-color: #191A23;
+}
+.gray{
+    background-color: #F3F3F3;
+}
 p{
     font-size: 20px;
 }
@@ -131,7 +140,6 @@ font-weight: 400;
     gap: 77px;
     width: 40%;
     height: 30vh;
-    background: #F3F3F3;
     border: 1px solid #191A23;
     box-shadow: 0px 5px 0px #191A23;
     border-radius: 45px;
