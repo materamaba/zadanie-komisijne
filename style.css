@@ -69,7 +69,8 @@ nav {
     font-weight: 500;
 }
 button{
-    padding: 1% 2%;
+    /*padding: 1% 2%;*/
+    padding:2%;
     border-radius: 14px;
     font-size: 16px;
     font-weight: 500;
@@ -81,6 +82,7 @@ button{
 .navs button {
     background: none;
     border: 1px solid black;
+    color: black;
 }
 
 header{
@@ -183,8 +185,44 @@ font-weight: 400;
     width:90%!important;
     border: none;
     box-shadow: none;
+    padding: 2%;
     background-color: #F3F3F3;
 }
 .wide>.left{
     padding-right: 10%;
+}
+.wide > .left > button{
+    width:40%;
+}
+.item{
+    background-color: #F3F3F3;
+    border-radius: 45px;
+    padding: 2%
+}
+.active > .item{
+    background-color: #B9FF66;
+}
+.akordeon-header{
+    position: relative;
+
+}
+.active > .item > .akordeon-content{
+    border-bottom: black 1px solid;
+}
+.akordeon-content{
+    display: none;    
+}
+.active > .item > .akordeon-content{
+    display:inline;    
+}
+.acorbutton{
+    position: absolute;
+    right: 5%;
+    top:0%;
+    border: none;
+    background: #F3F3F3;
+    box-shadow: none;
+    border-radius: 100%;
+    padding: 2%;
+    color: black;
 }
