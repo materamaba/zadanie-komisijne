@@ -196,28 +196,31 @@ font-weight: 400;
 }
 .item{
     background-color: #F3F3F3;
+    border: 1px solid #191A23;
+    box-shadow: 0px 5px 0px #191A23;
     border-radius: 45px;
-    padding: 2%
+    padding: 2%;
+    margin: 1%;
 }
-.active > .item{
+.active{
     background-color: #B9FF66;
 }
 .akordeon-header{
     position: relative;
 
 }
-.active > .item > .akordeon-content{
-    border-bottom: black 1px solid;
+.active > .akordeon-header{
+    border-bottom: black solid 1px;
 }
 .akordeon-content{
     display: none;    
 }
-.active > .item > .akordeon-content{
+.active > .akordeon-content{
     display:inline;    
 }
 .acorbutton{
     position: absolute;
-    right: 5%;
+    right: 0%;
     top:0%;
     border: none;
     background: #F3F3F3;
@@ -225,4 +228,61 @@ font-weight: 400;
     border-radius: 100%;
     padding: 2%;
     color: black;
+    border: 1px solid black;
 }
+
+
+
+.contact-form{
+    background: #F3F3F3;
+    border-radius: 45px;
+    display: flex;
+    position: relative;
+}
+form{
+    width: 50%;
+    margin:5%;
+    font-size: 16px;
+}
+img {
+    height: auto;
+    top: 10%;
+    max-height: 80%;
+    max-width: 40%;
+    position: absolute;
+    right: 0;
+    transform: translateX(45%);
+  }
+.radio{
+    display: flex;
+    word-wrap: nowrap;
+    width: 100%;
+  }
+  
+  label{
+    font-size: 14px;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    padding: 1%;
+    font-size: 14px;
+    border: 1px solid #F3F3F3;
+    border-radius: 14px;
+  }
+  
+  textarea {
+    resize: none;
+  }
+  
+  span {
+    color: red;
+  }
+  
+  .submit {
+    width: 100%;
+  }
+  .grupa{
+    margin:1%;
+  }
