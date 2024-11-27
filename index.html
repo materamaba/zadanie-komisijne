@@ -6,15 +6,15 @@
     <title>Positivus</title>
 </head>
 <body>
-    <nav>
+    <nav class="header-nav">
         <img src="img/logo.png" alt="logo">
         <div class="navs">
-        <a href="">About Us</a>
-        <a href="#services">Services</a>
-        <a href="">Use Cases</a>
-        <a href="">Pricing</a>
-        <a href="">Blog</a>
-        <button>Request a quote</button>
+            <a href="">About Us</a>
+            <a href="#services">Services</a>
+            <a href="">Use Cases</a>
+            <a href="">Pricing</a>
+            <a href="">Blog</a>
+            <button>Request a quote</button>
         </div>
     </nav>
 <header>
@@ -97,17 +97,17 @@
         </div>
     </div>
 </div>
-<div class="card wide grey">
-    <div class="left">
+<div class="wide grey">
+    <div class="wide-left">
         <h3>Let's make things happen</h3>
         <p>Contact us today to learn more about how our digital marketing services can help your business grow and succeed online.</p>
         <button>Get your free proposal</button>
     </div>
-    <div class="right">
+    <div class="wide-right">
         <img src="img/face.png" alt="face">
     </div>
 </div>
-<div style="display: flex; width: 50%; align-items:center;">
+<div style="display: flex; width: 70%; align-items:center;">
     <div>
         <h2 class="green" style="text-wrap: nowrap;">Our Working Process </h2>
     </div>
@@ -128,7 +128,7 @@
         </div>
         <div class="item">
             <div class="akordeon-header">
-                <h2><b>01</b>lorem ipsum</h2>
+                <h2><b>01 </b>lorem ipsum</h2>
                 <button class="acorbutton">+</button>
             </div>
             <div class="akordeon-content">
@@ -137,7 +137,7 @@
         </div>
         <div class="item">
             <div class="akordeon-header">
-                <h2><b>01</b>lorem ipsum</h2>
+                <h2><b>01 </b>lorem ipsum</h2>
                 <button class="acorbutton">+</button>
             </div>
             <div class="akordeon-content">
@@ -146,7 +146,7 @@
         </div>
         <div class="item">
             <div class="akordeon-header">
-                <h2><b>01</b>lorem ipsum</h2>
+                <h2><b>01 </b>lorem ipsum</h2>
                 <button class="acorbutton">+</button>
             </div>
             <div class="akordeon-content">
@@ -155,7 +155,7 @@
         </div>
         <div class="item">
             <div class="akordeon-header">
-                <h2><b>01</b>lorem ipsum</h2>
+                <h2><b>01 </b>lorem ipsum</h2>
                 <button class="acorbutton">+</button>
             </div>
             <div class="akordeon-content">
@@ -164,7 +164,7 @@
         </div>
         <div class="item">
             <div class="akordeon-header">
-                <h2><b>01</b>lorem ipsum</h2>
+                <h2><b>01 </b>lorem ipsum</h2>
                 <button class="acorbutton">+</button>
             </div>
             <div class="akordeon-content">
@@ -172,7 +172,7 @@
             </div>
         </div>
     </div>
-    <div style="display: flex; width: 50%; align-items:center;">
+    <div style="display: flex; width: 60%; align-items:center;">
         <div>
             <h2 class="green" style="text-wrap: nowrap;">Contact Us</h2>
         </div>
@@ -211,8 +211,8 @@
 </div>
 <footer>
         <nav>
-            <img src="img/white-logo.png" alt="logo">
             <div class="footer-nav">
+                <img src="img/white-logo.png" alt="logo">
                 <div class="text-navs">
             <a href="">About Us</a>
             <a href="#services">Services</a>
@@ -245,4 +245,28 @@
         <p class="copy">&copy; 2023 Positivus. All Rights Reserved. <a href="">Privacy Policy</a></p>
 </footer>
 </body>
+
+<script>
+document.querySelectorAll('.akordeon-header').forEach(header => {
+    header.addEventListener('click', () => {
+        const item = header.parentElement;
+        const button = header.querySelector('.acorbutton');
+        const isActive = item.classList.contains('active');
+
+        // Zamknij wszystkie i przywróć przyciski do "+"
+        document.querySelectorAll('.item').forEach(i => {
+            i.classList.remove('active');
+            const btn = i.querySelector('.acorbutton');
+            if (btn) btn.textContent = '+'; // Zmień przycisk na "+"
+        });
+
+        // Jeśli kliknięty nie był aktywny, otwórz go i zmień przycisk na "-"
+        if (!isActive) {
+            item.classList.add('active');
+            button.textContent = '-';
+        }
+    });
+});
+
+</script>
 </html>
